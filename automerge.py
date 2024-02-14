@@ -73,7 +73,7 @@ def upload_model_to_huggingface(username, model_name, yaml_config, license="apac
     ---
     license: {{ license }}
     tags:
-    - merge
+    - mergekit
     ---
 
     # {{ model_name }}
