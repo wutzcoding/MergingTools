@@ -37,12 +37,12 @@ def generate_and_merge_models():
     dtype: bfloat16
     experts_per_token: 2
     experts:
-        - source_model: codellama/CodeLlama-70b-Instruct-hf
+    - source_model: codellama/CodeLlama-70b-Instruct-hf
         positive_prompts:
-            - "You provide instruction-based assistance related to coding and other reasoning tasks."
-        - source_model: meta-llama/Llama-2-70b-chat-hf
+        - "You provide instruction-based assistance related to coding and other reasoning tasks."
+    - source_model: meta-llama/Llama-2-70b-chat-hf
         positive_prompts:
-            - "You provide help and are a general porpuse high performance assistant"
+        - "You provide help and are a general-purpose high-performance assistant."
 
     """
     
