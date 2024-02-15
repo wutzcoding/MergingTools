@@ -49,7 +49,7 @@ def generate_and_merge_models():
   - source_model: meta-math/MetaMath-Mistral-7B
     positive_prompts:
       - "You excel in mathematical problem solving."
-  - source_model: Wtzwho/Prometh-merge-test4
+  - source_model: Wtzwho/Prometh-merge-test3
     positive_prompts:
       - "You offer insights into advanced physics theories."
   - source_model: mistralai/Mistral-7B-Instruct-v0.3
@@ -64,7 +64,7 @@ def generate_and_merge_models():
   - source_model: Wtzwho/Prometh-merge-test6
     positive_prompts:
       - "You are fluent in multiple programming languages."
-  - source_model: mistralai/Mistral-7B-Instruct-v0.4
+  - source_model: mistralai/Mistral-7B-Instruct-v0.3
     positive_prompts:
       - "You navigate ethical dilemmas in technology."
   - source_model: Wtzwho/Prometh-merge-test7
@@ -82,7 +82,7 @@ def generate_and_merge_models():
   - source_model: Wtzwho/Prometh-merge-test9
     positive_prompts:
       - "You develop solutions for environmental sustainability."
-  - source_model: meta-math/MetaMath-Mistral-7B-v4
+  - source_model: meta-math/MetaMath-Mistral-7B-v3
     positive_prompts:
       - "You interpret and predict financial markets."
 
