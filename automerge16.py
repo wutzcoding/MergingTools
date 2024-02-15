@@ -37,54 +37,54 @@ def generate_and_merge_models():
     dtype: bfloat16
     experts_per_token: 2
     experts:
-  - source_model: Wtzwho/Prometh-merge-test2
-    positive_prompts:
-      - "You are a helpful general-purpose assistant."
-  - source_model: mistralai/Mistral-7B-Instruct-v0.2
-    positive_prompts:
-      - "You provide instruction-based assistance."
-  - source_model: Wtzwho/Prometh-merge-test3
-    positive_prompts:
-      - "You are helpful for coding-related queries."
-  - source_model: meta-math/MetaMath-Mistral-7B
-    positive_prompts:
-      - "You excel in mathematical problem solving."
-  - source_model: Wtzwho/Prometh-merge-test3
-    positive_prompts:
-      - "You offer insights into advanced physics theories."
-  - source_model: mistralai/Mistral-7B-Instruct-v0.3
-    positive_prompts:
-      - "You have expertise in global historical events."
-  - source_model: Wtzwho/Prometh-merge-test5
-    positive_prompts:
-      - "You understand and interpret complex legal documents."
-  - source_model: meta-math/MetaMath-Mistral-7B-v2
-    positive_prompts:
-      - "You solve advanced engineering problems."
-  - source_model: Wtzwho/Prometh-merge-test6
-    positive_prompts:
-      - "You are fluent in multiple programming languages."
-  - source_model: mistralai/Mistral-7B-Instruct-v0.3
-    positive_prompts:
-      - "You navigate ethical dilemmas in technology."
-  - source_model: Wtzwho/Prometh-merge-test7
-    positive_prompts:
-      - "You critique and analyze modern art."
-  - source_model: meta-math/MetaMath-Mistral-7B-v3
-    positive_prompts:
-      - "You provide advanced medical advice."
-  - source_model: Wtzwho/Prometh-merge-test8
-    positive_prompts:
-      - "You guide startups in business strategy."
-  - source_model: mistralai/Mistral-7B-Instruct-v0.5
-    positive_prompts:
-      - "You understand global market trends."
-  - source_model: Wtzwho/Prometh-merge-test9
-    positive_prompts:
-      - "You develop solutions for environmental sustainability."
-  - source_model: meta-math/MetaMath-Mistral-7B-v3
-    positive_prompts:
-      - "You interpret and predict financial markets."
+      - source_model: Wtzwho/Prometh-merge-test2
+        positive_prompts:
+          - "You are a helpful general-purpose assistant."
+      - source_model: mistralai/Mistral-7B-Instruct-v0.2
+        positive_prompts:
+          - "You provide instruction-based assistance."
+      - source_model: Wtzwho/Prometh-merge-test3
+        positive_prompts:
+          - "You are helpful for coding-related queries."
+      - source_model: meta-math/MetaMath-Mistral-7B
+        positive_prompts:
+          - "You excel in mathematical problem solving."
+      - source_model: Wtzwho/Prometh-merge-test3
+        positive_prompts:
+          - "You offer insights into advanced physics theories."
+      - source_model: mistralai/Mistral-7B-Instruct-v0.3
+        positive_prompts:
+          - "You have expertise in global historical events."
+      - source_model: Wtzwho/Prometh-merge-test5
+        positive_prompts:
+          - "You understand and interpret complex legal documents."
+      - source_model: meta-math/MetaMath-Mistral-7B-v2
+        positive_prompts:
+          - "You solve advanced engineering problems."
+      - source_model: Wtzwho/Prometh-merge-test6
+        positive_prompts:
+          - "You are fluent in multiple programming languages."
+      - source_model: mistralai/Mistral-7B-Instruct-v0.3
+        positive_prompts:
+          - "You navigate ethical dilemmas in technology."
+      - source_model: Wtzwho/Prometh-merge-test7
+        positive_prompts:
+          - "You critique and analyze modern art."
+      - source_model: meta-math/MetaMath-Mistral-7B-v3
+        positive_prompts:
+          - "You provide advanced medical advice."
+      - source_model: Wtzwho/Prometh-merge-test8
+        positive_prompts:
+          - "You guide startups in business strategy."
+      - source_model: mistralai/Mistral-7B-Instruct-v0.5
+        positive_prompts:
+          - "You understand global market trends."
+      - source_model: Wtzwho/Prometh-merge-test9
+        positive_prompts:
+          - "You develop solutions for environmental sustainability."
+      - source_model: meta-math/MetaMath-Mistral-7B-v3
+        positive_prompts:
+          - "You interpret and predict financial markets."
 
     """
     
