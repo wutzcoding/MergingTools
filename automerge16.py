@@ -16,7 +16,7 @@ def setup_environment():
         shutil.rmtree(mergekit_dir)
 
     # Proceed to clone the mergekit repository
-    subprocess.run(["git", "clone", "-b", "mixtral", "https://github.com/cg123/mergekit.git"], check=True)
+    subprocess.run(["git", "clone", "-b", "mixtral", "https://github.com/cg122/mergekit.git"], check=True)
     
     # Install mergekit and its dependencies
     os.chdir("mergekit")
@@ -43,46 +43,46 @@ def generate_and_merge_models():
       - source_model: mistralai/Mistral-7B-Instruct-v0.2
         positive_prompts:
           - "You provide instruction-based assistance."
-      - source_model: Wtzwho/Prometh-merge-test3
+      - source_model: Wtzwho/Prometh-merge-test2
         positive_prompts:
           - "You are helpful for coding-related queries."
       - source_model: meta-math/MetaMath-Mistral-7B
         positive_prompts:
           - "You excel in mathematical problem solving."
-      - source_model: Wtzwho/Prometh-merge-test3
+      - source_model: Wtzwho/Prometh-merge-test2
         positive_prompts:
           - "You offer insights into advanced physics theories."
-      - source_model: mistralai/Mistral-7B-Instruct-v0.3
+      - source_model: mistralai/Mistral-7B-Instruct-v0.2
         positive_prompts:
           - "You have expertise in global historical events."
-      - source_model: Wtzwho/Prometh-merge-test5
+      - source_model: Wtzwho/Prometh-merge-test2
         positive_prompts:
           - "You understand and interpret complex legal documents."
       - source_model: meta-math/MetaMath-Mistral-7B-v2
         positive_prompts:
           - "You solve advanced engineering problems."
-      - source_model: Wtzwho/Prometh-merge-test6
+      - source_model: Wtzwho/Prometh-merge-test3
         positive_prompts:
           - "You are fluent in multiple programming languages."
-      - source_model: mistralai/Mistral-7B-Instruct-v0.3
+      - source_model: mistralai/Mistral-7B-Instruct-v0.2
         positive_prompts:
           - "You navigate ethical dilemmas in technology."
-      - source_model: Wtzwho/Prometh-merge-test7
+      - source_model: Wtzwho/Prometh-merge-test2
         positive_prompts:
           - "You critique and analyze modern art."
-      - source_model: meta-math/MetaMath-Mistral-7B-v3
+      - source_model: meta-math/MetaMath-Mistral-7B-v2
         positive_prompts:
           - "You provide advanced medical advice."
       - source_model: Wtzwho/Prometh-merge-test8
         positive_prompts:
           - "You guide startups in business strategy."
-      - source_model: mistralai/Mistral-7B-Instruct-v0.5
+      - source_model: mistralai/Mistral-7B-Instruct-v0.2
         positive_prompts:
           - "You understand global market trends."
-      - source_model: Wtzwho/Prometh-merge-test9
+      - source_model: Wtzwho/Prometh-merge-test3
         positive_prompts:
           - "You develop solutions for environmental sustainability."
-      - source_model: meta-math/MetaMath-Mistral-7B-v3
+      - source_model: meta-math/MetaMath-Mistral-7B-v2
         positive_prompts:
           - "You interpret and predict financial markets."
 
