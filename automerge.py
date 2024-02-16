@@ -69,38 +69,95 @@ def upload_model_to_huggingface(username, model_name, yaml_config, license="apac
         raise ValueError("Hugging Face token not found. Please set the HF_TOKEN environment variable.")
 
     # Define the template for the model card
-    model_card_template = """
+    model_card_template ="""
     ---
     license: {{ license }}
     tags:
-    - mergekit
     ---
-
-    # {{ model_name }}
-
-    {{ model_name }} is a merged model using mergekit with the following configuration:
-
+    ---
     ```yaml
     {{ yaml_config }}
     ```
+    # {{ model_name }} Model Card
+    <!-- Provide a quick summary of what the model is/does. -->
+    {{ model_name }} is a 
 
-    ## 💻 Usage
+    ## Model Sources and Components 
+    <!-- Provide a list of sources and components used in the model. In the bellow format-->
+    - [What will appear to the user](link to the hugging face model)
 
-    To use this model, install the `transformers` library and then use the following code:
+    ## Key Features
+     <!-- Provide a list of key features of the model. Bellow in an example -->
+    - Enhanced Performance: 
+    - Versatility: 
+    - State-of-the-Art Integration: 
+
+    ## Application Areas
+     <!-- Provide a list of areas in which the model can be applied. Bellow in an example -->
+    The model excels in:
+    - Area 1
+    - Area 2
+
+    ## 💻 Usage Instructions
+    <!-- Explain in simple steps how the user can apply the model-->
+   
+    Integrate the model into your projects with these steps:
+
+    <!-- Example of how to generate a UI python template -->
 
     ```python
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    # Installation
+    pip install -qU transformers bitsandbytes accelerate
 
-    model_name = "{{ username }}/{{ model_name }}"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(model_name)
+    # Example code
+    from transformers import AutoTokenizer, pipeline
+    import torch
 
-    prompt = "Your prompt here"
-    inputs = tokenizer(prompt, return_tensors="pt")
-    outputs = model.generate(**inputs)
-    print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+    model = "{{ model_name }}"
+    tokenizer = AutoTokenizer.from_pretrained(model)
+
+    # Setting up the pipeline
+    pipeline = pipeline(
+        "text-generation",
+        model=model,
+        model_kwargs={"torch_dtype": torch.float16, "load_in_4bit": True},
+    )
+
+    # Example query
+    messages = [{"role": "user", "content": "[Example Query]"}]
+    prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+
+    outputs = pipeline(prompt, max_new_tokens=256, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
+    print(outputs[0]["generated_text"])
     ```
-    """
+
+    ## Technical Specifications
+
+
+    ##  Model Details and Attribution
+
+    - Developed by: {{ username }}
+    - Shared by: [Organization Name]
+    - Model type: [Model Type]
+    - Language(s): [Supported Languages]
+    - License: [License]
+
+    ## Environmental Impact
+
+    [Environmental impact details]
+
+    ## Out-of-Scope Use
+
+    Not intended for generating harmful or biased content.
+
+    ## Bias, Risks, and Limitations
+
+    [To be filled]
+
+    ## Recommendations
+
+    Evaluate the model for biases and ethical considerations before deployment.
+"""
 
     # Fill in the template
     model_card_content = model_card_template.format(
