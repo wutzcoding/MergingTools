@@ -31,32 +31,14 @@ setup_environment()
 
 def generate_and_merge_models():
     # Define the YAML configuration for the model
-    yaml_config = """
-    base_model: mistralai/Mistral-7B-Instruct-v0.2
-    gate_mode: hidden
-    dtype: bfloat16
-    experts_per_token: 2
-    experts:
-      - source_model: Wtzwho/Prometh-merge-test2
-        positive_prompts:
-          - "You are a helpful general-purpose assistant."
-      - source_model: mistralai/Mistral-7B-Instruct-v0.2
-        positive_prompts:
-          - "You provide instruction-based assistance."
-      - source_model: Wtzwho/Prometh-merge-test3
-        positive_prompts:
-          - "You are helpful for coding-related queries."
-      - source_model: meta-math/MetaMath-Mistral-7B
-        positive_prompts:
-          - "You excel in mathematical problem solving."
-    """
+    yaml_config = './configs/merge240.yml'
     
     # Save the YAML configuration to a file
     with open('config.yaml', 'w', encoding="utf-8") as config_file:
         config_file.write(yaml_config)
     
     # Run mergekit to merge the models as specified in the YAML config
-    subprocess.run(["mergekit-moe", "config.yaml", "merge", "--copy-tokenizer", "--allow-crimes", 
+    subprocess.run(["mergekit", "config.yaml", "merge", "--copy-tokenizer", "--allow-crimes", 
                     "--out-shard-size", "1B", "--lazy-unpickle", "--device", "cuda", 
                     "--low-cpu-memory", "--trust-remote-code"], check=True)
 
