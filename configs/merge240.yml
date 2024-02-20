@@ -1,0 +1,57 @@
+MODEL_NAME: "merged_240b_v1"
+merge_method: linear
+parameters:
+  weight: 1.0
+slices:
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [0, 1]
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [0, 1]
+        parameters:
+          weight: 0
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [1, 20]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [10, 30]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [20, 40]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [30, 50]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [40, 60]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [50, 70]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [60, 80]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [70, 90]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [80, 100]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [90, 110]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [100, 120]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [110, 130]
+  - sources:
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [120, 139]
+      - model: wolfram/miquliz-120b-v2.0
+        layer_range: [120, 139]
+        parameters:
+          weight: 0
+dtype: float16
+tokenizer_source: model:wolfram/miquliz-120b-v2.0

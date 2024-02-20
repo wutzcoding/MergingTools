@@ -1,0 +1,41 @@
+merge_method: linear
+parameters:
+  weight: 1.0
+slices:
+  - sources:
+      - model: 152334H/miqu-1-70b-sf
+        layer_range: [0, 1]
+      - model: lizpreciatior/lzlv_70b_fp16_hf
+        layer_range: [0, 1]
+        parameters:
+          weight: 0
+  - sources:
+      - model: 152334H/miqu-1-70b-sf
+        layer_range: [1, 20]
+  - sources:
+      - model: lizpreciatior/lzlv_70b_fp16_hf
+        layer_range: [10, 30]
+  - sources:
+      - model: 152334H/miqu-1-70b-sf
+        layer_range: [20, 40]
+  - sources:
+      - model: lizpreciatior/lzlv_70b_fp16_hf
+        layer_range: [30, 50]
+  - sources:
+      - model: 152334H/miqu-1-70b-sf
+        layer_range: [40, 60]
+  - sources:
+      - model: lizpreciatior/lzlv_70b_fp16_hf
+        layer_range: [50, 70]
+  - sources:
+      - model: 152334H/miqu-1-70b-sf
+        layer_range: [60, 79]
+  - sources:
+      - model: 152334H/miqu-1-70b-sf
+        layer_range: [79, 80]
+      - model: lizpreciatior/lzlv_70b_fp16_hf
+        layer_range: [79, 80]
+        parameters:
+          weight: 0
+dtype: float16
+tokenizer_source: model:152334H/miqu-1-70b-sf
