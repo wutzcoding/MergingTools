@@ -31,7 +31,7 @@ setup_environment()
 
 def generate_and_merge_models():
     # Define the YAML configuration for the model
-    yaml_config = './configs/merge240.yml'
+    yaml_config = './configs/merge500.yml'
     
     # Save the YAML configuration to a file
     with open('config.yaml', 'w', encoding="utf-8") as config_file:
