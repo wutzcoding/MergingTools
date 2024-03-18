@@ -1,6 +1,6 @@
-# AutoMerge
+# MergingTools
 
-AutoMerge is a Python-based automation tool designed to streamline the process of merging pre-trained language models. Leveraging the powerful capabilities of `mergekit`, AutoMerge facilitates elaborate merges of models such as Llama, Mistral, GPT-NeoX, StableLM, and more, under resource-constrained situations. The tool supports both CPU and GPU execution, offering an out-of-core approach to perform merges efficiently with minimal resource requirements.
+MergingTools is a Python-based automation tool designed to streamline the process of merging pre-trained language models. Leveraging the powerful capabilities of `mergekit`, MergingTools facilitates elaborate merges of models such as Llama, Mistral, GPT-NeoX, StableLM, and more, under resource-constrained situations. The tool supports both CPU and GPU execution, offering an out-of-core approach to perform merges efficiently with minimal resource requirements.
 
 ## Features
 
@@ -15,7 +15,7 @@ AutoMerge is a Python-based automation tool designed to streamline the process o
 Ensure you have Python 3.6+ and `pip` installed on your system. Clone the repository and set up the environment by running:
 
 ```sh
-git clone https://github.com/wutzcoding/AutoMerge.git
+git clone https://github.com/wutzcoding/MergingTools.git
 cd AutoMerge
 python -m pip install --upgrade pip
 python setup_environment.py
