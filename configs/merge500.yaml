@@ -1,39 +1,37 @@
 MODEL_NAME: "Behemoth-MOEM"
-base_model: AIFS/Prometh-222B
-gate_mode: hidden
-dtype: bfloat16
+base_model: "AIFS/Prometh-222B"
+gate_mode: "hidden"
+dtype: "bfloat16"
 experts_per_token: 2
 experts:
-
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
       - "You Write and optimize code for a given problem statement."
 
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
       - "You are an expert on abductive reasoning"
 
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
       - "You solve complex problems with detailed reasoning."
 
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
       - "You excell in summarization of long articles and forms of text"
 
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
-      - " You excell at thinking step by step"
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
+      - "You excell at thinking step by step"
   
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
-      - "You are an expert writter and Content Creation Muse"
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
+      - "You are an expert writer and Content Creation Muse"
 
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
-      - "Your are an expert in Theory of Mind "
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
+      - "You are an expert in Theory of Mind"
 
-  - source_model: AIFS/Prometh-222B
-    positive_prompt:
-      - " You are excelent at teaching and explaining concepts"
-
+  - source_model: "AIFS/Prometh-222B"
+    positive_prompts:
+      - "You are excellent at teaching and explaining concepts"
