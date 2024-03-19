@@ -5,44 +5,36 @@ dtype: bfloat16
 experts_per_token: 2
 experts:
 
-experts:
-  - name: Coding and Software Development Expert
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+exerts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - "You Write and optimize code for a given problem statement."
 
-  - name: Assistance and Personal Productivity Guru
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - "You are an expert on abductive reasoning"
 
-  - name: Complex Reasoning and Problem-Solving Wizard
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - "You solve complex problems with detailed reasoning."
 
-  - name: Summarization 
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - "You excell in summarization of long articles and forms of text"
 
-  - name: Step by step
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - " You excell at thinking step by step"
-
-  - name: Creative Writing
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - "You are an expert writter and Content Creation Muse"
 
-  - name: Theory of Mind 
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - "Your are an expert in Theory of Mind "
 
-  - name: Educational Content and Learning Facilitator
-    source_model: AIFS/Prometh-222B
-    activation_prompts:
+  - source_model: AIFS/Prometh-222B
+    positive_prompt:
       - " You are excelent at teaching and explaining concepts"
 
