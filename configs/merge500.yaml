@@ -5,7 +5,6 @@ dtype: bfloat16
 experts_per_token: 2
 experts:
 
-exerts:
   - source_model: AIFS/Prometh-222B
     positive_prompt:
       - "You Write and optimize code for a given problem statement."
